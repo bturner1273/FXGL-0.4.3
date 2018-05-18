@@ -1,0 +1,823 @@
+15:51:07.462 [JavaFX Application Thread] DEBUG GameApplication      - Logger initialized
+15:51:07.475 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+15:51:07.659 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 800.0 x 600.0
+15:51:07.660 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    800.0 x 600.0
+15:51:07.661 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+15:51:08.133 [JavaFX Application Thread] DEBUG GameApplication      - Starting FXGL
+15:51:08.203 [FXGL Launcher Thread     ] INFO  Version              - FXGL-0.4.2
+15:51:08.204 [FXGL Launcher Thread     ] INFO  Version              - Source code and latest versions at: https://github.com/AlmasB/FXGL
+15:51:08.204 [FXGL Launcher Thread     ] INFO  Version              -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+15:51:08.211 [FXGL Launcher Thread     ] DEBUG FXGL                 - Loading FXGL system data
+15:51:08.221 [FXGL Launcher Thread     ] DEBUG IOTask               - Executing task: readDataTask(system/fxgl.bundle)
+15:51:08.257 [FXGL Launcher Thread     ] DEBUG FS                   - Reading from: system/fxgl.bundle
+15:51:08.307 [FXGL Launcher Thread     ] DEBUG IOTask               - Task succeeded: readDataTask(system/fxgl.bundle)
+15:51:08.307 [FXGL Launcher Thread     ] DEBUG Bundle               - Logging bundle: FXGL
+15:51:08.308 [FXGL Launcher Thread     ] DEBUG Bundle               - FXGL.offline.timer.version.check=2018-03-05T20:02:26.650
+15:51:08.333 [FXGL Launcher Thread     ] DEBUG GameApplication      - FXGL started
+15:51:08.335 [FXGL Launcher Thread     ] DEBUG GameApplication      - Logging game settings
+Title: Space Invaders
+Version: 
+Width: 800
+Height: 600
+Fullscreen: false
+Intro: false
+Menus: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.scene.SceneFactory
+Dialog Factory: class com.almasb.fxgl.ui.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.ui.FXGLUIFactory
+Notification Service: class com.almasb.fxgl.gameplay.notification.XboxNotificationView
+Exception Handler: class com.almasb.fxgl.app.FXGLExceptionHandler
+15:51:08.336 [FXGL Launcher Thread     ] DEBUG GameApplication      - Configuring GameApplication
+15:51:08.337 [FXGL Launcher Thread     ] DEBUG GameApplication      - Initializing state machine and application states
+15:51:08.351 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:51:08.382 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:51:08.388 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:51:08.408 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/core/notification.wav
+15:51:08.497 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/select.wav
+15:51:08.498 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/back.wav
+15:51:08.500 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/press.wav
+15:51:08.502 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/VarelaRound-Regular.ttf
+15:51:08.525 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/lucida_console.ttf
+15:51:08.533 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+15:51:08.534 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/icons/fxgl_icon.png
+15:51:08.558 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:51:08.616 [FXGL Launcher Thread     ] DEBUG FXGL.GameScene       - Game scene initialized: 800x600
+15:51:08.621 [FXGL Launcher Thread     ] DEBUG FXGL.GameWorld       - Game world initialized
+15:51:08.690 [FXGL Launcher Thread     ] DEBUG FXGL.PhysicsWorld    - Physics world initialized: appHeight=600, physics.ppm=50.0
+15:51:08.717 [FXGL Launcher Thread     ] DEBUG Input                - Registered new binding: Pause - Esc
+15:51:08.737 [FXGL Launcher Thread     ] INFO  GameApplication      - Game configuration took:  0.399 sec
+15:51:08.740 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+15:51:08.821 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (0.0, 22.0)
+15:51:08.821 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 800.0 x 600.0
+15:51:08.821 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+15:51:08.821 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 800.0 x 600.0
+15:51:08.821 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 800.0 x 622.0
+15:51:08.822 [JavaFX Application Thread] DEBUG GameApplication      - Running preInit()
+15:51:08.823 [JavaFX Application Thread] DEBUG AnnotationParser     - Main app package name: SpaceInvaders
+15:51:08.824 [JavaFX Application Thread] WARN  AnnotationParser     - SpaceInvaderMain has no package or contains uppercase letters. Disabling annotations processing
+15:51:08.833 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+15:51:08.834 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - CTRL+0
+15:51:08.834 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+15:51:08.835 [JavaFX Application Thread] DEBUG Input                - Registered new binding: shoot - Space
+15:51:08.835 [JavaFX Application Thread] DEBUG Input                - Registered new binding: move left - Left
+15:51:08.835 [JavaFX Application Thread] DEBUG Input                - Registered new binding: move right - Right
+15:51:08.836 [JavaFX Application Thread] DEBUG Input                - Registered new binding: move up - Up
+15:51:08.836 [JavaFX Application Thread] DEBUG Input                - Registered new binding: move down - Down
+15:51:08.836 [JavaFX Application Thread] DEBUG Input                - Registered new binding: speed up - V
+15:51:08.884 [JavaFX Application Thread] DEBUG GameApplication      - Starting main loop
+15:51:08.914 [JavaFX Application Thread] DEBUG StartupState         - STARTUP
+15:51:08.914 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+15:51:08.914 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+15:51:08.956 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> LoadingState
+15:51:08.957 [JavaFX Application Thread] DEBUG AnnotationParser     - Main app package name: SpaceInvaders
+15:51:08.957 [JavaFX Application Thread] WARN  AnnotationParser     - SpaceInvaderMain has no package or contains uppercase letters. Disabling annotations processing
+15:51:08.957 [JavaFX Application Thread] DEBUG InitAppTask          - Parsing annotations
+15:51:08.963 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+15:51:08.964 [FXGL Background Thread 1 ] DEBUG FXGL.GameWorld       - Clearing game world
+15:51:08.964 [FXGL Background Thread 1 ] DEBUG FXGL.PhysicsWorld    - Clearing physics world
+15:51:08.964 [FXGL Background Thread 1 ] DEBUG FXGL.GameScene       - Clearing game scene
+15:51:08.965 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Assets
+15:51:08.966 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+15:51:09.030 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/SpaceInvaders/player.png
+15:51:09.052 [FXGL Background Thread 1 ] DEBUG FXGL.GameScene       - Creating render group for layer: TOP(2147483647)
+15:51:09.063 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+15:51:09.065 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+15:51:09.065 [FXGL Background Thread 1 ] DEBUG FXGL.GameScene       - Creating render group for layer: BACKGROUND(1000)
+15:51:09.066 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/SpaceInvaders/Background/starBig.png
+15:51:09.067 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/SpaceInvaders/Background/starSmall.png
+15:51:09.068 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starBig.png
+15:51:09.068 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starSmall.png
+15:51:09.068 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starBig.png
+15:51:09.069 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starSmall.png
+15:51:09.069 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starBig.png
+15:51:09.069 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starSmall.png
+15:51:09.069 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starBig.png
+15:51:09.069 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starSmall.png
+15:51:09.070 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starSmall.png
+15:51:09.070 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starBig.png
+15:51:09.070 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starSmall.png
+15:51:09.070 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starBig.png
+15:51:09.071 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starSmall.png
+15:51:09.071 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starBig.png
+15:51:09.071 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starSmall.png
+15:51:09.072 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starBig.png
+15:51:09.072 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/Background/starSmall.png
+15:51:09.078 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+15:51:09.078 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0.115 sec
+15:51:09.094 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+15:51:09.113 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+15:51:09.714 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:10.212 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:10.780 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:10.902 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/SpaceInvaders/playerLeft.png
+15:51:11.198 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:11.201 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:11.203 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:11.208 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:11.296 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:11.346 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:11.348 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:11.348 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:11.614 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:11.780 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/explosions/explosion-4.png
+15:51:11.799 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/SpaceInvaders/playerRight.png
+15:51:11.847 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:12.269 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:12.364 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:12.366 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:12.367 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:12.367 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:12.514 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:12.516 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:12.517 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:12.741 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerLeft.png
+15:51:12.797 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:12.881 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:12.957 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:13.397 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:13.498 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:13.499 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:13.500 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:13.648 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:13.649 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:13.650 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:13.881 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:13.914 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:14.048 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:14.298 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/SpaceInvaders/meteorSmall.png
+15:51:14.302 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorSmall.png
+15:51:14.303 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/SpaceInvaders/meteorBig.png
+15:51:14.448 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:14.481 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:14.483 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:14.483 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:14.664 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:14.665 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:14.666 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:14.699 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/explosions/explosion-6.png
+15:51:14.831 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:14.964 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:14.966 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:14.999 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-6.png
+15:51:15.244 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerLeft.png
+15:51:15.482 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:15.637 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.781 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.797 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.814 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.828 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerRight.png
+15:51:15.830 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.847 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.864 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.881 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.896 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.914 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.931 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.946 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.964 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.980 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:15.998 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.000 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:16.014 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.031 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.048 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.064 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.081 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.098 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.114 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.131 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.147 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.163 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.166 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.181 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.198 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.214 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.231 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.247 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.264 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.281 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.298 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.314 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.331 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.348 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.364 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.381 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.498 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.501 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerLeft.png
+15:51:16.514 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.516 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:16.531 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.548 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.564 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.580 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.597 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.614 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.631 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.648 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.664 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.681 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.698 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.715 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.731 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.747 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.764 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.781 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.797 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.814 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.831 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.848 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.865 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.869 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.881 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.897 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.915 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.931 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.948 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.965 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.981 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:16.997 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.019 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.032 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.033 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:17.048 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.065 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.081 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.097 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.114 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.131 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.144 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerRight.png
+15:51:17.148 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.165 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.182 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.198 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.215 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.232 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.248 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.265 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.281 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.298 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.315 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.332 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.348 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.361 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.365 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.366 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:17.367 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:17.367 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:17.381 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.398 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.415 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.431 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.448 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.465 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.482 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.498 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.515 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.531 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.548 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.550 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:17.551 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:17.551 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:17.565 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.582 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.598 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.615 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.632 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.648 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.665 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.682 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.698 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.715 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.731 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.733 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:17.748 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.765 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.783 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.798 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.815 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.832 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.848 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.865 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.882 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.898 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.900 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:17.913 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerRight.png
+15:51:17.914 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.932 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.949 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.965 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.982 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:17.998 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.015 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.031 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.061 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.066 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.082 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.099 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.115 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.132 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.148 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.150 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.165 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.182 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.199 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.215 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.217 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:18.217 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:18.217 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:18.232 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.249 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.265 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.281 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.299 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.315 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.331 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.349 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.365 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.381 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.399 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.415 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.432 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.449 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.465 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.482 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.499 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.515 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.532 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.549 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.564 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.582 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.599 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.615 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.632 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.649 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.665 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.667 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:18.682 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.699 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.715 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.732 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.749 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.766 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.781 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.783 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:18.783 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:18.784 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:18.799 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.816 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.832 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.849 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.865 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.882 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.899 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.916 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.931 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.949 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.966 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.967 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:18.968 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:18.968 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:18.982 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:18.999 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.015 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.032 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.049 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.065 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.082 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.098 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.115 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.117 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:19.117 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:19.118 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:19.131 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.148 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.164 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.182 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.199 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.216 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.232 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.249 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.265 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.282 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.299 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.315 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.317 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:19.318 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:19.318 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:19.318 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorSmall.png
+15:51:19.319 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorSmall.png
+15:51:19.320 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorBig.png
+15:51:19.332 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.349 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.366 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.382 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.399 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.416 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.432 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.449 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.466 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.483 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.499 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.516 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.532 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.535 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:19.536 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:19.536 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:19.549 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.566 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.583 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.599 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.602 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-6.png
+15:51:19.616 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.633 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.649 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.666 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.669 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerLeft.png
+15:51:19.683 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.685 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:19.685 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:19.686 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:19.699 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.716 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.732 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.749 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.766 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.782 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.799 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.816 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.833 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.849 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.866 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.883 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.900 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.902 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:19.916 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.928 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.933 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.949 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.966 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.968 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:19.968 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:19.968 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:19.983 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:19.999 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.016 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.032 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.034 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:20.049 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.066 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.083 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.099 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.116 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.133 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.149 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.166 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.182 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.183 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:20.184 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:20.184 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:20.185 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:20.200 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.216 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.233 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.248 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.265 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.282 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.300 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.316 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.333 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.350 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.352 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:20.366 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.383 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.398 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.400 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-6.png
+15:51:20.416 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.433 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.435 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:20.435 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:20.435 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:20.449 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.466 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.483 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.500 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.516 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.533 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.535 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:20.550 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.566 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.583 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.599 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.616 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.632 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:20.902 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerLeft.png
+15:51:20.951 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:21.034 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:21.045 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:21.418 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:21.418 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:21.419 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:21.534 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:21.585 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:21.585 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:21.586 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:21.718 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:21.868 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:21.869 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:21.869 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:21.984 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:22.034 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:22.269 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:22.652 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:22.652 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:22.653 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:22.835 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:22.836 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:22.836 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:23.019 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:23.219 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:23.651 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:23.651 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:23.652 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:23.818 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:23.819 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:23.819 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:23.868 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:24.001 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:24.002 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:24.002 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:24.003 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:24.034 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:24.252 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:24.252 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:24.253 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:24.268 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:24.318 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorSmall.png
+15:51:24.319 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorSmall.png
+15:51:24.319 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorBig.png
+15:51:24.535 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:24.552 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:24.585 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:24.585 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:24.586 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:24.752 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-6.png
+15:51:24.802 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:24.868 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:24.869 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:24.869 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:24.968 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:24.969 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:24.969 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:25.035 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:25.135 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:25.218 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:25.285 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:25.286 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:25.286 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:25.402 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:25.403 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:25.403 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:25.419 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-6.png
+15:51:25.502 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:25.503 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:25.503 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:25.535 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:25.586 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-6.png
+15:51:25.686 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:25.769 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:25.802 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:25.804 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:25.804 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:26.052 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:26.103 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:26.569 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:26.615 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerLeft.png
+15:51:26.693 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:27.086 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:27.603 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:28.120 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:29.110 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerRight.png
+15:51:29.337 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorSmall.png
+15:51:29.338 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorSmall.png
+15:51:29.338 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorBig.png
+15:51:29.383 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:30.238 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-6.png
+15:51:30.285 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerLeft.png
+15:51:30.462 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:30.705 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:31.405 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:31.405 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:31.406 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:31.406 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:31.407 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:31.471 [JavaFX Application Thread] WARN  FXGL.GameWorld       - Attempted to remove entity which is not active
+15:51:31.622 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:31.623 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:31.623 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:31.624 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:31.739 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:31.806 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:31.806 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:31.806 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:31.939 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:31.939 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:31.939 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:31.940 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:32.072 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:32.073 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:32.073 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:32.089 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:32.189 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:32.189 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:32.190 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:32.255 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:32.272 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:32.322 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:32.422 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:32.423 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:32.423 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:32.556 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:32.772 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:32.806 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:32.806 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:32.806 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:32.839 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:32.841 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:32.872 [JavaFX Application Thread] WARN  FXGL.GameWorld       - Attempted to remove entity which is not active
+15:51:32.939 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:32.940 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:32.940 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:33.289 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:33.340 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:33.470 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerRight.png
+15:51:33.572 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.653 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerRight.png
+15:51:33.689 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.706 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.722 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.739 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.756 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.772 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.789 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.805 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.822 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.839 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.856 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.872 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.889 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.906 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.923 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.939 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.957 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.972 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:33.989 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.006 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.022 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.039 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.056 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.063 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.073 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.089 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.106 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.123 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.139 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.156 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.173 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.189 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.206 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.223 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.239 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.256 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.273 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.289 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.306 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.322 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.339 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.356 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.357 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorSmall.png
+15:51:34.357 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorSmall.png
+15:51:34.358 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/meteorBig.png
+15:51:34.373 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.390 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.406 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.423 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.440 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.456 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.473 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.478 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/playerLeft.png
+15:51:34.490 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.506 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.522 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.539 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.556 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.573 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.590 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.606 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.623 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.640 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.657 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.673 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.690 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.706 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.723 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.739 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.757 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.773 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.790 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.807 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.808 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-6.png
+15:51:34.823 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.840 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.841 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:34.856 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.873 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.874 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:34.874 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:34.875 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:34.890 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.907 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.923 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.940 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.956 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.973 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.988 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:34.990 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.006 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.023 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.040 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.040 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:35.041 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:35.041 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:35.056 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.073 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.090 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.106 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.107 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-6.png
+15:51:35.123 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.139 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.156 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.173 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.190 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.206 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.223 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.224 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:35.224 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:35.225 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:35.240 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.257 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.273 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.274 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:35.290 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.307 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.323 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.340 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.341 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:35.357 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.357 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:35.373 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.390 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.407 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.423 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.440 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.457 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.473 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.490 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.507 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.524 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.525 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosions/explosion-4.png
+15:51:35.540 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.557 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.573 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.590 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.607 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.623 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.640 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.641 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreen.png
+15:51:35.641 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/laserGreenShot.png
+15:51:35.641 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:51:35.657 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.673 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.690 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.707 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.723 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.740 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.757 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.773 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.790 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.807 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/player.png
+15:51:35.857 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:35.873 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:36.390 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/SpaceInvaders/enemyShip.png
+15:51:37.641 [JavaFX Application Thread] DEBUG GameApplication      - Exiting game application
+15:51:37.643 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+15:51:37.643 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+15:51:37.643 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+15:51:37.644 [JavaFX Application Thread] DEBUG IOTask               - Executing task: writeDataTask(system/fxgl.bundle)
+15:51:37.646 [JavaFX Application Thread] DEBUG FS                   - Writing to: system/fxgl.bundle
+15:51:37.651 [JavaFX Application Thread] DEBUG IOTask               - Task succeeded: writeDataTask(system/fxgl.bundle)
+15:51:37.652 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX
